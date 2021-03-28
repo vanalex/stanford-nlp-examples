@@ -1,5 +1,7 @@
-package com.ml.clustering;
+package com.ml.classification;
 
+import com.ml.clustering.ClusteringTask;
+import util.TreePrinter;
 import weka.attributeSelection.AttributeSelection;
 import weka.attributeSelection.InfoGainAttributeEval;
 import weka.attributeSelection.Ranker;
@@ -84,6 +86,8 @@ public class Classification {
             System.out.println(eval_roc.toSummaryString());
             double[][] confusionMatrix = eval_roc.confusionMatrix();
             System.out.println(eval_roc.toMatrixString());
+
+            TreePrinter.visualize(tree);
 
         }
         catch(Exception e) {
