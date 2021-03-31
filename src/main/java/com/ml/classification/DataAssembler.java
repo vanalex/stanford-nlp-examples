@@ -11,7 +11,7 @@ import weka.filters.unsupervised.attribute.Remove;
 public class DataAssembler {
 
     public static Instances assemble(Instances data) throws Exception {
-        setupTrainingData(data);
+        data = setupTrainingData(data);
         featureSelection(data);
         return data;
     }
