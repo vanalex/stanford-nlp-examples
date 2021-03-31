@@ -1,5 +1,6 @@
-package com.ml.classification;
+package com.ml.classification.arranger;
 
+import com.ml.classification.ClassifyArranger;
 import weka.classifiers.trees.J48;
 import weka.core.Instances;
 

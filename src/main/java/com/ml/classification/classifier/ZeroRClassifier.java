@@ -1,14 +1,14 @@
-package com.ml.classification;
+package com.ml.classification.classifier;
 
-import weka.classifiers.trees.J48;
+import com.ml.classification.Classifier;
+import weka.classifiers.rules.ZeroR;
 import weka.core.DenseInstance;
 import weka.core.Instance;
 import weka.core.Instances;
 
-public class J48Classifier extends Classifier<J48>{
-
+public class ZeroRClassifier extends Classifier<ZeroR> {
     @Override
-    String classify(Instances instances, J48 j48) throws Exception {
+    public String classify(Instances instances, ZeroR zeroR) throws Exception {
         double[] vals = new double[instances.numAttributes()];
         vals[0] = 1.0; //hair {false, true}
         vals[1] = 0.0; //feathers {false, true}
@@ -30,7 +30,7 @@ public class J48Classifier extends Classifier<J48>{
         Instance myUnicorn = new DenseInstance(1.0, vals);
         myUnicorn.setDataset(instances);
 
-        double result = j48.classifyInstance(myUnicorn);
+        double result = zeroR.classifyInstance(myUnicorn);
         System.out.println(instances.classAttribute().value((int) result));
         return instances.classAttribute().value((int) result);
     }
