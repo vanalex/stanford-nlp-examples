@@ -30,6 +30,11 @@
       <version>3.19.0</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.nd4j</groupId>
+      <artifactId>nd4j-native</artifactId>
+      <version>1.0.0-beta7</version>
+    </dependency>
 
   </dependencies>
 
