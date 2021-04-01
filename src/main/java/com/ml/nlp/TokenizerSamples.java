@@ -99,7 +99,6 @@ public class TokenizerSamples {
         StopWord stopWords = new StopWord();
         SimpleTokenizer simpleTokenizer = SimpleTokenizer.INSTANCE;
         String tokens[] = simpleTokenizer.tokenize(sample);
-        usingLingpipeStopWord();
         return stopWords.removeStopWords(tokens);
     }
 }
