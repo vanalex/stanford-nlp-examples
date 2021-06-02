@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.ml</groupId>
-  <artifactId>machine-learning-java</artifactId>
+  <groupId>com.nlp</groupId>
+  <artifactId>statnford-nlp-core-examples</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>machine-learning-java</name>
@@ -16,7 +16,7 @@
   </properties>
 
   <dependencies>
-    <!--<dependency>
+    <dependency>
       <groupId>nz.ac.waikato.cms.weka</groupId>
       <artifactId>weka-stable</artifactId>
       <version>3.8.0</version>
@@ -25,7 +25,7 @@
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-math3</artifactId>
       <version>3.5</version>
-    </dependency>-->
+    </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
@@ -44,7 +44,7 @@
       <version>3.19.0</version>
       <scope>test</scope>
     </dependency>
-    <!--<dependency>
+    <dependency>
       <groupId>org.nd4j</groupId>
       <artifactId>nd4j-native</artifactId>
       <version>1.0.0-beta7</version>
@@ -63,6 +63,13 @@
       <groupId>edu.stanford.nlp</groupId>
       <artifactId>stanford-corenlp</artifactId>
       <version>4.2.0</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>edu.stanford.nlp</groupId>
+      <artifactId>stanford-corenlp</artifactId>
+      <version>4.2.0</version>
+      <classifier>models</classifier>
     </dependency>
     <dependency>
       <groupId>uk.ac.gate</groupId>
@@ -78,7 +85,7 @@
       <groupId>org.apache.lucene</groupId>
       <artifactId>lucene-core</artifactId>
       <version>8.8.1</version>
-    </dependency>-->
+    </dependency>
   </dependencies>
 
   <build>
