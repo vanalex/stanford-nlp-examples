@@ -1,4 +1,4 @@
-package com.nlp;
+package com.nlp.pipeline;
 
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 
