@@ -2,8 +2,10 @@ package com.nlp;
 
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.CoreDocument;
+import edu.stanford.nlp.pipeline.CoreSentence;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 
+import java.util.List;
 import java.util.Properties;
 
 public class BasicPipelineExample {
@@ -35,5 +37,18 @@ public class BasicPipelineExample {
         //System.out.println("Example: token");
         //System.out.println(token);
         //System.out.println();
+
+        String sentenceText = document.sentences().get(0).text();
+        System.out.println("Example: sentence");
+        System.out.println(sentenceText);
+        System.out.println();
+
+        CoreSentence sentence = document.sentences().get(1);
+
+        List<String> posTags = sentence.posTags();
+        System.out.println("Example: pos tags");
+        System.out.println(posTags);
+        System.out.println();
+
     }
 }
