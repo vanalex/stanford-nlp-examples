@@ -50,5 +50,10 @@ public class BasicPipelineExample {
         System.out.println(posTags);
         System.out.println();
 
+        List<String> nerTags = sentence.nerTags();
+        System.out.println("Example: ner tags");
+        System.out.println(nerTags);
+        System.out.println();
+
     }
 }
